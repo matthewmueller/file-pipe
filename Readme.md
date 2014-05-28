@@ -6,6 +6,9 @@
 ## Example
 
 ```js
+var filepipe = require('file-pipe');
+var insert = require('gulp-insert');
+
 filepipe(__dirname + '/index.js')
   .pipe(insert.prepend('/* Brought to you by file-pipe! */'))
   .pipe(insert.append('/* Good bye for now! */'))
@@ -28,6 +31,8 @@ Add a gulp stream or function. Functions will be wrapped by `map-stream`
 ### `run([path], fn)`
 
 Run the file pipe, calling `fn` when finished or there is an error. Optionally pass a `path` which overrides the initial path.
+
+Here's an example of the override:
 
 ```js
 var writer = filepipe()

@@ -107,20 +107,3 @@ filepipe.prototype.stream = function(path) {
     .pipe(stripbom.stream())
     .pipe(this.format(path))
 };
-
-
-var insert = require('gulp-insert');
-
-filepipe(__dirname + '/index.js')
-  .pipe(insert.append('hi omg!!!'))
-  .pipe(insert.prepend('hi omg!!!'))
-  .run(function(err, str) {
-    console.log(err, str);
-  })
-
-// var vinyl = require('vinyl-fs');
-
-// vinyl.src([__dirname + '/duo.js'])
-//   .pipe(map(function(file, fn) {
-//     console.log(file);
-//   }))

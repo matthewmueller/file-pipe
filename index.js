@@ -7,6 +7,7 @@ var fs = require('graceful-fs');
 var pipe = require('multipipe');
 var map = require('map-stream');
 var File = require('vinyl');
+var noop = map(function(file, fn) { fn(null, file) });
 
 /**
  * Export `filepipe`
@@ -57,6 +58,8 @@ filepipe.prototype.run = function (path, fn) {
   }
 
   if (!path) throw new Error('no file specified');
+
+  !this.streams.length && this.streams.push(noop);
 
   var stream = this.stream(path);
   var streams = pipe.apply(null, this.streams);

@@ -1,0 +1,24 @@
+{
+  "name": "file-pipe",
+  "version": "0.0.1",
+  "description": "use gulp plugins on individual files",
+  "keywords": [],
+  "author": "Matthew Mueller <mattmuelle@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MatthewMueller/file-pipe.git"
+  },
+  "dependencies": {
+    "graceful-fs": "~2.0.3",
+    "map-stream": "~0.1.0",
+    "vinyl": "~0.2.3",
+    "strip-bom": "~0.3.1",
+    "multipipe": "~0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "gulp-insert": "~0.3.0"
+  },
+  "main": "index"
+}

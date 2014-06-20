@@ -2,6 +2,8 @@
 # file-pipe
 
   Use gulp plugins on individual files
+  
+  **Beware:** Don't use this library if you need to transform files concurrently. Gulp transforms have the same pointers leading to unexpected results. The most common stream wrapper in gulp transforms is `map-stream` which doesn't allow an instance of the stream to be used multiple times even if queued. 
 
 ## Example
 

@@ -1,6 +1,6 @@
 {
   "name": "file-pipe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "use gulp plugins on individual files",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",

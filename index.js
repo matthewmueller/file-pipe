@@ -67,19 +67,19 @@ filepipe.prototype.run = function (path, fn) {
   streams.on('error', function(err) {
     fn && fn(err);
   });
- 
+
   return stream
     .pipe(streams)
     .pipe(map(done));
 
   function done(file, end) {
-    fn && fn(null, file.contents.toString());
+    fn && fn(null, file.contents.toString(), file);
     end();
   }
 };
 
 /**
- * Make the readable stream 
+ * Make the readable stream
  * compatible with gulp.
  *
  * @param {String} path
